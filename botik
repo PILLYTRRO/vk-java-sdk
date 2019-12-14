@@ -1,0 +1,1410 @@
+console.log('')
+console.log('-------------------------------')
+console.log(' 袘芯褌 褉邪斜芯褌邪械褌!')
+console.log('-------------------------------')
+console.log('')
+
+const { VK } = require("vk-io");
+const vk = new VK();
+const commands = [];
+const fs = require("fs");
+const rq = require("prequest");
+const request = require('prequest');
+
+const promo = require('./base/promo.json');
+const clans = require('./base/clans.json');
+const botinfo = require('./base/botinfo.json');
+let giving = false;
+let user = new VK();
+
+user.setOptions({
+token: '950cf0a09dfdc3cc1a69a47a19eb191dee55f6edb051a98fec49629dec79070caaae539d7b31c1f204dba'
+});
+
+setInterval(async () => {
+users.map(user => {
+for(var i = 0; i < user.business.length; i++)
+{
+const biz = businesses[user.business[i].id - 1][user.business[i].upgrade - 1];
+user.business[i].moneys += Math.floor(biz.earn / biz.workers * user.business[i].workers)
+}
+});
+}, 3600000);
+
+setInterval(() => {
+fs.writeFileSync("./base/promo.json", JSON.stringify(promo, null, "\t"));
+}, 15000);
+
+const cars = [
+{
+id: 1,
+name: "Lada 2110",
+cost: 75000,
+att: "photo-160021944_456240473"
+},
+{
+id: 2,
+name: "Hyundai Solaris",
+cost: 250000,
+att: "photo-160021944_456240472"
+},
+{
+id: 3,
+name: "Toyota Camry",
+cost: 1000000,
+att: "photo-160021944_456240477"
+},
+{
+id: 4,
+name: "BMW 5",
+cost: 100000000,
+att: "photo-160021944_456240471"
+},
+{
+id: 5,
+name: "Mercedes - Benz",
+cost: 5000000000,
+att: "photo-160021944_456240475"
+},
+{
+id: 6,
+name: "Lamborghini Huracan",
+cost: 100000000000,
+att: "photo-160021944_456240474"
+},
+{
+id: 7,
+name: "Rolls Roys Wrath",
+cost: 50000000000000,
+att: "photo-160021944_456240476"
+}
+];
+// 袧褍卸薪芯 褋写械谢邪褌褜 褌褍褉薪懈褉"", 胁芯芯斜褖械屑.
+const bicycles = [
+{
+id: 1,
+name: "ELOPS 520 BTWIN",
+cost: 20000,
+att: "photo-181133436_456239018"
+},
+{
+id: 2,
+name: "Stern Rocket 20",
+cost: 100000,
+att: "photo-181133436_456239019"
+},
+{
+id: 3,
+name: "ST520 27.5 ROCKRIDER",
+cost: 250000,
+att: "photo-181133436_456239020"
+},
+{
+id: 4,
+name: "(BMX)Subrosa Tiro 20'",
+cost: 400000,
+att: "photo-181133436_456239021"
+},
+{
+id: 5,
+name: "(BMX) FORWARD Zigzag 1.0",
+cost: 500000,
+att: "photo-181133436_456239022"
+},
+{
+id: 6,
+name: "(BMX) Stark Gravity",
+cost: 600000,
+att: "photo-181133436_456239023"
+},
+{
+id: 7,
+name: "(BMX) Blitz Mini M1 10'",
+cost: 800000,
+att: "photo-181133436_456239024"
+}
+];
+
+const scooters = [
+{
+id: 1,
+name: "小邪屑芯泻邪褌 '袟械薪懈褌'",
+coins: 14000,
+att: "photo220302713_456240623"
+}
+];
+
+const pets = [
+{
+name: '校褌泻邪',
+cost: 50000,
+id: 1,
+att: "photo-178650735_456239076"
+},
+{
+name: '袩械褌褍褏',
+cost: 150000,
+id: 2,
+att: "photo-178650735_456239077"
+},
+{
+name: '袨斜械蟹褜褟薪邪',
+cost: 300000,
+id: 3,
+att: "photo-178650735_456239078"
+},
+{
+name: '袦褘褉褌褘褕泻邪',
+cost: 900000,
+id: 4,
+att: "photo-178650735_456239079"
+},
+{
+name: '袥芯褕邪写褜',
+cost: 1500000,
+id: 5,
+att: "photo-178650735_456239081"
+},
+{
+name: '小谢芯薪',
+cost: 2500000,
+id: 6,
+att: "photo-178650735_456239082"
+},
+{
+name: '袚械锌邪褉写',
+cost: 30000000,
+id: 7,
+att: "photo-178650735_456239083"
+}
+];
+
+const petsupd = [
+{
+cost: 60000,
+id: 1
+},
+{
+cost: 1750000,
+id: 2
+},
+{
+cost: 310000,
+id: 3
+},
+{
+cost: 915000,
+id: 4
+},
+{
+cost: 1550000,
+id: 5
+},
+{
+cost: 2800000,
+id: 6
+},
+{
+cost: 40000000,
+id: 7
+}
+];
+
+const homes = [
+{
+name: '袣芯褉芯斜泻邪 懈蟹-锌芯写 褏芯谢芯写懈谢褜薪懈泻邪',
+cost: 250,
+id: 1,
+att: "photo-178650735_456239085"
+},
+{
+name: '袩芯写胁邪谢',
+cost: 3000,
+id: 2,
+att: "photo-178650735_456239086"
+
+},
+{
+name: '袩邪谢邪褌泻邪',
+cost: 3500,
+id: 3,
+att: "photo-178650735_456239087"
+},
+{
+name: '袛芯屑懈泻 薪邪 写械褉械胁械',
+cost: 500
+ 
+0,
+id: 4,
+att: "photo-178650735_456239088"
+},
+{
+name: '袩芯谢褍褉邪蟹褉褍褕械薪薪褘泄 写芯屑',
+cost: 10000,
+id: 5,
+att: "photo-178650735_456239089"
+},
+{
+name: '袛芯屑 胁 谢械褋褍',
+cost: 25000,
+id: 6,
+att: "photo-178650735_456239090"
+},
+{
+name: '袛械褉械胁褟薪薪褘泄 写芯屑',
+cost: 37500,
+id: 7,
+att: "photo-178650735_456239091"
+},
+{
+name: '袛邪褔邪',
+cost: 125000,
+id: 8,
+att: "photo-178650735_456239092"
+},
+{
+name: '袣懈褉锌懈褔薪褘泄 写芯屑',
+cost: 80000,
+id: 9,
+att: "photo-178650735_456239093"
+},
+{
+name: '袣芯褌褌械写卸',
+cost: 450000,
+id: 10,
+att: "photo-178650735_456239095"
+},
+{
+name: '袨褋芯斜薪褟泻',
+cost: 1250000,
+id: 11,
+att: "photo-178650735_456239096"
+},
+{
+name: '袛芯屑 薪邪 袪褍斜谢褢胁泻械',
+cost: 5000000,
+id: 12,
+att: "photo-178650735_456239097"
+},
+{
+name: '袥懈褔薪褘泄 薪械斜芯褋泻褉褢斜',
+cost: 7000000,
+id: 13,
+att: "photo-178650735_456239098"
+},
+{
+name: '袨褋褌褉芯胁 褋 芯褋芯斜薪褟泻芯屑',
+cost: 12500000,
+id: 14,
+att: "photo-178650735_456239099"
+},
+{
+name: '袘械谢褘泄 写芯屑',
+cost: 20000000,
+id: 15,
+att: "photo-178650735_456239100"
+}
+];
+
+const airplanes = [
+{
+name: '袧械斜芯谢褜褕芯泄 锌谢邪薪械褉',
+cost: 10000,
+id: 1,
+att: "photo-178650735_456239102"
+},
+{
+name: '袩邪褉邪锌谢邪薪',
+cost: 75000,
+id: 2,
+att: "photo-178650735_456239103"
+},
+{
+name: '携泻-40',
+cost: 400000,
+id: 3,
+att: "photo-178650735_456239104"
+},
+{
+name: '袙懈小 1',
+cost: 900000,
+id: 4,
+att: "photo-178650735_456239105"
+},
+{
+name: 'Tundra',
+cost: 1200000,
+id: 5,
+att: "photo-178650735_456239106"
+},
+{
+name: '小袗-20袩',
+cost: 1750000,
+id: 6,
+att: "photo-178650735_456239107"
+},
+{
+name: '袥-39',
+cost: 3000000,
+id: 7,
+att: "photo-178650735_456239109"
+},
+{
+name: 'Boeing 737-500',
+cost: 6000000,
+id: 8,
+att: "photo-178650735_456239110"
+},
+{
+name: 'Piper M350',
+cost: 15000000,
+id: 9,
+att: "photo-178650735_456239111"
+},
+{
+name: 'Beechcraft Baron 58P',
+cost: 25000000,
+id: 10,
+att: "photo-178650735_456239112"
+},
+{
+name: '校孝-2袘',
+cost: 45000000,
+id: 11,
+att: "photo-178650735_456239113"
+},
+{
+name: 'Beechcraft 60 Duke',
+cost: 80000000,
+id: 12,
+att: "photo-178650735_456239114"
+},
+{
+name: '孝袪-301孝袙',
+cost: 150000000,
+id: 13,
+att: "photo-178650735_456239115"
+},
+{
+name: '袥-410校袙袩',
+cost: 280000000,
+id: 14,
+att: "photo-178650735_456239116"
+},
+{
+name: 'C-17A Globemaster III',
+cost: 400000000,
+id: 15,
+att: "photo-178650735_456239117"
+},
+{
+name: 'Boeing 747SP',
+cost: 750000000,
+id: 16,
+att: "photo-178650735_456239118"
+},
+{
+name: 'Gulfstream IV',
+cost: 1000000000,
+id: 17,
+att: "photo-178650735_456239119"
+}
+];
+
+const phones = [
+{
+name: 'Nokia 105',
+cost: 1500,
+id: 1,
+att: "photo-178650735_456239121"
+},
+{
+name: 'Philips Xenium E168',
+cost: 4000,
+id: 2,
+att: "photo-178650735_456239122"
+},
+{
+name: 'Xiaomi Redmi 6A 2',
+cost: 6000,
+id: 3,
+att: "photo-178650735_456239123"
+},
+{
+name: 'Digma LINX ATOM 3G',
+cost: 9000,
+id: 4,
+att: "photo-178650735_456239124"
+},
+{
+name: 'Alcatel 1',
+cost: 12000,
+id: 5,
+att: "photo-178650735_456239125"
+},
+{
+name: 'Honor 9 Lite',
+cost: 20000,
+id: 6,
+att: "photo-178650735_456239126"
+},
+{
+name: 'Samsung Galaxy J6',
+cost: 36000,
+id: 7,
+att: "photo-178650735_456239127"
+},
+{
+name: 'IPhone 5',
+cost: 60000,
+id: 8,
+att: "photo-178650735_456239128"
+},
+{
+name: 'Xperia XZ Premium',
+cost: 100000,
+id: 9,
+att: "photo-178650735_456239129"
+},
+{
+name: 'Samsung Galaxy J8',
+cost: 300000,
+id: 10,
+att: "photo-178650735_456239130"
+},
+{
+name: 'IPhone X',
+cost: 1500000,
+id: 11,
+att: "photo-178650735_456239131"
+},
+{
+name: 'IPhone 3GS Supreme',
+cost: 5000000,
+id: 12,
+att: "photo-1786507
+ 
+35_456239132"
+}
+];
+
+const peka = [
+{
+name: 'TOPCOMP MG 5567830 GL503VD',
+cost: 32500,
+id: 1,
+att: "photo-178650735_456239136"
+},
+{
+name: 'COMPYOU GAME PC G777',
+cost: 74000,
+id: 2,
+att: "photo-178650735_456239137"
+},
+{
+name: 'RIWER GAME-GTX (G9-793)',
+cost: 96000,
+id: 3,
+att: "photo-178650735_456239138"
+},
+{
+name: 'ASUS ROG GR8II-T055Z',
+cost: 105000,
+id: 4,
+att: "photo-178650735_456239139"
+},
+{
+name: 'KEY GM PRO',
+cost: 117600,
+id: 5,
+att: "photo-178650735_456239140"
+},
+{
+name: 'MSI VORTEX G65VR 7RE',
+cost: 130000,
+id: 6,
+att: "photo-178650735_456239142"
+},
+{
+name: 'ARENA A085885',
+cost: 325000,
+id: 7,
+att: "photo-178650735_456239143"
+},
+{
+name: 'DELL XPS TOWER SPECIAL EDITION',
+cost: 486000,
+id: 8,
+att: "photo-178650735_456239144"
+},
+{
+name: 'APPLE IMAC 小 协袣袪袗袧袨袦 5K RETINA',
+cost: 564000,
+id: 9,
+att: "photo-178650735_456239145"
+},
+{
+name: 'SURFACE STUDIO',
+cost: 835000,
+id: 10,
+att: "photo-178650735_456239146"
+}
+];
+
+/*const logcmdes = [];*/
+
+const businesses = [
+[ // 袘懈蟹薪械褋 #1
+{ // 小褌邪薪写邪褉褌薪褘泄 斜懈蟹薪械褋
+name: '楔邪褍褉屑械褔薪邪褟',
+cost: 50000,
+earn: 200,
+workers: 1,
+id: 1,
+icon: '馃'
+},
+
+{ // 袩械褉胁芯械 褍谢褍褔褕械薪懈械
+name: '5 褕邪褍褉屑械褔薪褘褏',
+cost: 350000,
+earn: 1000,
+workers: 10,
+id: 1,
+icon: '馃'
+},
+
+{ // 袙褌芯褉芯械 褍谢褍褔褕械薪懈械
+name: '袧械斜芯谢褜褕邪褟 褋械褌褜 褕邪褍褉屑械褔薪褘褏',
+cost: 900000,
+earn: 2625,
+workers: 30,
+id: 1,
+icon: '馃'
+},
+
+{ // 3 褍谢褍褔褕械薪懈械
+name: '小褉械写薪褟褟 褋械褌褜 褕邪褍褉屑械褔薪褘褏',
+cost: 1200000,
+earn: 3750,
+workers: 50,
+id: 1,
+icon: '馃'
+},
+
+{ // 袩芯褋谢械写薪械械 褍谢褍褔褕械薪懈械
+name: '袥褍褔褕邪褟 褕邪褍褉屑邪 胁 褋褌褉邪薪械',
+cost: 4000000,
+earn: 11000,
+workers: 200,
+id: 1,
+icon: '馃'
+}
+],
+
+[
+{
+name: '袥邪褉褢泻',
+cost: 100000,
+earn: 700,
+workers: 1,
+id: 2,
+icon: '馃彧'
+},
+
+{
+name: '5 谢邪褉褜泻芯胁',
+cost: 500000,
+earn: 3700,
+workers: 5,
+id: 2,
+icon: '馃彧'
+},
+
+{
+name: '小褉械写薪褟褟 褋械褌褜 谢邪褉褜泻芯胁',
+cost: 950000,
+earn: 7725,
+workers: 40,
+id: 2,
+icon: '馃彧'
+},
+
+{
+name: '袥邪褉褜泻懈 胁芯 胁褋械褏 谐芯褉芯写邪褏 褋褌褉邪薪褘',
+cost: 8000000,
+earn: 37450,
+workers: 150,
+id: 2,
+icon: '馃彧'
+},
+
+{
+name: '袥邪褉褜泻懈 胁 泻邪卸写芯泄 褋褌褉邪薪械',
+cost: 17500000,
+earn: 79950,
+workers: 400,
+id: 2,
+icon: '馃彧'
+}
+],
+
+[
+{
+name: '袟邪斜械谐邪谢芯胁泻邪',
+cost: 300000,
+earn: 2700,
+workers: 3,
+id: 3,
+icon: '馃嵎'
+},
+
+{
+name: '袨斜褖械锌懈褌',
+cost: 450000,
+earn: 4350,
+workers: 7,
+id: 3,
+icon: '馃嵎'
+},
+
+{
+name: '袪械褋褌芯褉邪薪',
+cost: 450000,
+earn: 7400,
+workers: 15,
+id: 3,
+icon: '馃嵎'
+},
+
+{
+name: '袧械斜芯谢褜褕邪褟 褋械褌褜 褉械褋褌芯褉邪薪芯胁',
+cost: 4000000,
+earn: 19900,
+workers: 80,
+id: 3,
+icon: '馃嵎'
+},
+
+{
+name: '袥褍褔褕懈械 褉械褋褌芯褉邪薪褘 胁 褋褌褉邪薪械',
+cost: 11000000,
+earn: 47400,
+workers: 300,
+id: 3,
+icon: '馃嵎'
+}
+],
+
+[
+{
+name: '袦懈薪懈-屑邪谐邪蟹懈薪',
+cost: 500000,
+earn: 4100,
+workers: 15,
+id: 4,
+icon: '馃彨'
+},
+
+{
+name: '袦邪谐邪蟹懈薪',
+cost: 1250000,
+earn: 9350,
+workers: 10,
+id: 4,
+icon: '馃彨'
+},
+
+{
+name: '小械褌褜 屑邪谐邪蟹懈薪芯胁',
+cost: 3000000,
+earn: 23350,
+workers: 70,
+id: 4,
+icon: '馃彨'
+},
+
+{
+name: '小械褌褜 褋褍锌械褉屑邪褉泻械褌芯胁',
+cost: 20000000,
+earn: 109850,
+workers: 500,
+id: 4,
+icon: '馃彨'
+}
+],
+
+[
+{
+name: '袟邪胁芯写 胁 谐邪褉邪卸械',
+cost: 1500000,
+earn: 8800,
+workers: 5,
+id: 5,
+icon: '馃彮'
+},
+
+{
+name: '小褉械写薪懈泄 蟹邪胁芯写',
+cost: 3500000,
+earn: 13800,
+workers: 20,
+id: 5,
+icon: '馃彮'
+},
+
+{
+name: '小械褌褜 蟹邪胁芯写芯胁',
+cost: 15000000,
+earn: 60800,
+workers: 200,
+id: 5,
+icon: '馃彮'
+},
+
+{
+name: '袚谢邪胁薪褘械 蟹邪胁芯写褘 褋褌褉邪薪褘',
+cost
+ 
+: 50000000,
+earn: 274800,
+workers: 1000,
+id: 5,
+icon: '馃彮'
+}
+],
+
+[
+{
+name: '校谐芯谢褜薪邪褟 褕邪褏褌邪',
+cost: 25000000,
+earn: 84700,
+workers: 50,
+id: 6,
+icon: '鉀 '
+},
+
+{
+name: '袟芯谢芯褌邪褟 褕邪褏褌邪',
+cost: 50000000,
+earn: 117200,
+workers: 75,
+id: 6,
+icon: '鉀 '
+},
+
+{
+name: '袗谢屑邪蟹薪邪褟 褕邪褏褌邪',
+cost: 60000000,
+earn: 229700,
+workers: 200,
+id: 6,
+icon: '鉀 '
+},
+
+{
+name: '袗谢屑邪蟹薪褘泄 泻邪褉褜械褉',
+cost: 90000000,
+earn: 432700,
+workers: 360,
+id: 6,
+icon: '鉀 '
+},
+
+{
+name: '袣褉褍锌薪械泄褕懈泄 邪谢屑邪蟹薪褘泄 泻邪褉褜械褉',
+cost: 200000000,
+earn: 709700,
+workers: 700,
+id: 6,
+icon: '鉀 '
+}
+],
+
+[
+{
+name: '袦邪谢械薪褜泻懈泄 芯褎懈褋',
+cost: 80000000,
+earn: 229625,
+workers: 10,
+id: 7,
+icon: '馃彚'
+},
+
+{
+name: '小褉械写薪懈泄 芯褎懈褋',
+cost: 240000000,
+earn: 329175,
+workers: 60,
+id: 7,
+icon: '馃彚'
+},
+
+{
+name: '袘芯谢褜褕芯泄 芯褎懈褋',
+cost: 240000000,
+earn: 614675,
+workers: 200,
+id: 7,
+icon: '馃彚'
+},
+
+{
+name: '袨褎懈褋-薪械斜芯褋泻褉褢斜',
+cost: 1000000000,
+earn: 1227275,
+workers: 700,
+id: 7,
+icon: '馃彚'
+}
+],
+
+[
+{
+name: '袥褞斜懈褌械谢褜褋泻懈泄 GameDev',
+cost: 150000000,
+earn: 302000,
+workers: 5,
+id: 8,
+icon: '馃暪'
+},
+
+{
+name: '袠薪写懈 GameDev',
+cost: 200000000,
+earn: 379500,
+workers: 10,
+id: 8,
+icon: '馃暪'
+},
+
+{
+name: 'AA GameDev',
+cost: 750000000,
+earn: 1024500,
+workers: 50,
+id: 8,
+icon: '馃暪'
+},
+
+{
+name: 'AAA GameDev',
+cost: 5000000000,
+earn: 6749500,
+workers: 500,
+id: 8,
+icon: '馃暪'
+}
+],
+
+[
+{
+name: '袧械褎褌械胁褘褕泻邪',
+cost: 500000000,
+earn: 707000,
+workers: 8,
+id: 9,
+icon: '馃彍'
+},
+
+{
+name: '袧械褎褌械锌谢邪褌褎芯褉屑邪 胁 屑芯褉械',
+cost: 750000000,
+earn: 1019000,
+workers: 20,
+id: 9,
+icon: '馃彍'
+},
+
+{
+name: '袧械褎褌械锌谢邪褌褎芯褉屑邪 胁 芯泻械邪薪械',
+cost: 1250000000,
+earn: 4049000,
+workers: 50,
+id: 9,
+icon: '馃彍'
+},
+
+{
+name: '5 薪械褎褌械锌谢邪褌褎芯褉屑 胁 芯泻械邪薪械',
+cost: 5000000000,
+earn: 15249000,
+workers: 250,
+id: 9,
+icon: '馃彍'
+}
+],
+
+[
+{
+name: '袦懈薪懈 袗协小',
+cost: 800000000,
+earn: 1050700,
+workers: 40,
+id: 10,
+icon: '馃挕'
+},
+
+{
+name: '小褉械写薪褟褟 袗协小',
+cost: 1200000000,
+earn: 1496200,
+workers: 75,
+id: 10,
+icon: '馃挕'
+},
+
+{
+name: '袗协小 褋 5 褝薪械褉谐芯斜谢芯泻邪屑懈',
+cost: 4250000000,
+earn: 3088700,
+workers: 300,
+id: 10,
+icon: '馃挕'
+},
+
+{
+name: '袣褉褍锌薪械泄褕邪褟 袗协小',
+cost: 10000000000,
+earn: 34843700,
+workers: 650,
+id: 10,
+icon: '馃挕'
+}
+],
+
+[
+{
+name: 'Apple Store',
+cost: 25000000000,
+earn: 250000000,
+workers: 75,
+id: 11,
+icon: '馃椇'
+},
+
+{
+name: '袦邪谐邪蟹懈薪 Apple',
+cost: 3000000000000,
+earn: 1000000000,
+workers: 150,
+id: 11,
+icon: '馃椇'
+},
+
+{
+name: '笑械薪褌褉邪谢褜薪褘泄 Apple Store',
+cost: 9000000000000,
+earn: 5000000000,
+workers: 250,
+id: 11,
+icon: '馃椇'
+},
+
+{
+name: '袟邪胁芯写 Apple',
+cost: 20000000000000,
+earn: 11000000000,
+workers: 500,
+id: 11,
+icon: '馃椇'
+},
+
+{
+name: '袟邪胁芯写褘 Apple 锌芯 胁褋械屑褍 屑懈褉褍',
+cost: 100000000000000,
+earn: 45000000000,
+workers: 1000,
+id: 11,
+icon: '馃椇'
+},
+
+{
+name: '袟邪胁芯写褘 Apple 锌芯 胁褋械泄 袚邪谢邪泻褌懈泻械',
+cost: 200000000000000,
+earn: 75000000000,
+workers: 1500,
+id: 11,
+icon: '馃椇'
+},
+
+{
+name: '[VIP]袦械卸谐邪谢邪泻褌懈褔械褋泻懈械 蟹邪胁芯写褘 Apple',
+cost: 500000000000000,
+earn: 300000000000,
+workers: 15000,
+id: 11,
+icon: '馃椇'
+}
+]
+];
+
+const farms = [
+{
+name: '袦懈薪懈 褎械褉屑邪',
+cost: 100000000,
+id: 1
+},
+{
+name: '小褉械写薪褟褟 褎械褉屑邪',
+cost: 500000000,
+id: 2
+},
+{
+name: '袘芯谢褜褕邪褟 褎械褉屑邪',
+cost: 780000000,
+id: 3
+},
+{
+name: '袣芯褉锌芯褉邪褑懈褟',
+ 
+cost: 21500000000,
+id: 4
+},
+{
+name: 'Forbes',
+cost: 220000000000,
+id: 5
+}
+];
+
+function getUnix() {
+return Date.now();
+}
+
+function unixStamp(stamp) {
+let date = new Date(stamp),
+year = date.getFullYear(),
+month = date.getMonth() + 1,
+day = date.getDate(),
+hour = date.getHours() < 10 ? "0"+date.getHours() : date.getHours(),
+mins = date.getMinutes() < 10 ? "0"+date.getMinutes() : date.getMinutes(),
+secs = date.getSeconds() < 10 ? "0"+date.getSeconds() : date.getSeconds();
+
+return `${day}.${month}.${year}, ${hour}:${mins}:${secs}`;
+}
+
+function unixStampLeft(stamp) {
+stamp = stamp / 1000;
+
+let s = stamp % 60;
+stamp = ( stamp - s ) / 60;
+
+let m = stamp % 60;
+stamp = ( stamp - m ) / 60;
+
+let h = ( stamp ) % 24;
+let d = ( stamp - h ) / 24;
+
+let text = ``;
+
+if(d > 0) text += Math.floor(d) + " 写. ";
+if(h > 0) text += Math.floor(h) + " 褔. ";
+if(m > 0) text += Math.floor(m) + " 屑懈薪. ";
+if(s > 0) text += Math.floor(s) + " 褋.";
+
+return text;
+}
+
+const utils = {
+sp: (int) => {
+int = int.toString();
+return int.split('').reverse().join('').match(/[0-9]{1,3}/g).join('.').split('').reverse().join('');
+},
+rn: (int, fixed) => {
+if (int === null) return null;
+if (int === 0) return '0';
+fixed = (!fixed || fixed < 0) ? 0 : fixed;
+let b = (int).toPrecision(2).split('e'),
+k = b.length === 1 ? 0 : Math.floor(Math.min(b[1].slice(1), 14) / 3),
+c = k < 1 ? int.toFixed(0 + fixed) : (int / Math.pow(10, k * 3) ).toFixed(1 + fixed),
+d = c < 0 ? c : Math.abs(c),
+e = d + ['', '褌褘褋', '屑谢薪', '屑谢褉写', '褌褉谢薪'][k];
+
+e = e.replace(/e/g, '');
+e = e.replace(/\+/g, '');
+e = e.replace(/Infinity/g, '袛袨啸袝袪袗');
+
+return e;
+},
+gi: (int) => {
+int = int.toString();
+
+let text = ``;
+for (let i = 0; i < int.length; i++)
+{
+text += `${int[i]}⃣`;
+}
+
+return text;
+},
+decl: (n, titles) => { return titles[(n % 10 === 1 && n % 100 !== 11) ? 0 : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? 1 : 2] },
+random: (x, y) => {
+return y ? Math.round(Math.random() * (y - x)) + x : Math.round(Math.random() * x);
+},
+pick: (array) => {
+return array[utils.random(array.length - 1)];
+}
+}
+
+let users = require('./base/users.json');
+//let logsUsers = require('./base/Logs.json');
+let config = require('./base/settings.json');
+
+/*async function saveLogs()
+{
+require('fs').createFileSync('./base/Logs.json', JSON.stringify(users, null, '\t'));;
+return true;
+}*/
+
+vk.setOptions({ token: config.grouptoken, pollingGroupId: config.groupid });
+const { updates, snippets } = vk;
+
+updates.startPolling();
+updates.on('message', async (message) => {
+stats.messages.inbox += 1;
+if(Number(message.senderId) <= 0) return;
+
+if(!users.find(x=> x.id === message.senderId))
+{
+const [user_info] = await vk.api.users.get({ user_id: message.senderId });
+const date = new Date();
+
+users.push({
+id: message.senderId,
+uid: users.length,
+level: 1,
+exp: 1,
+expup: 24,
+balance: 5000,
+bank: 0,
+coins: 0,
+cosmos: 0,
+ruda: 0,
+operator: 1,
+number: 0,
+numberss: false,
+shaxt_tpcoins: 0,
+farm_coins: 0,
+farms: 0,
+bonustime: 0,
+poxod: 0,
+petpoxod: 0,
+case: 0,
+stag: 0,
+biz: 0,
+bizlvl: 0,
+business: [],
+foolder: 0,
+workenergy: 5,
+energy: 10,
+petenergy: 10,
+opit: 0,
+zhelezo: 0,
+zoloto: 0,
+almaz: 0,
+ugol: 0,
+old: false,
+rubin: 0,
+platina: 0,
+hack: 0,
+floder: 0,
+rating: 0,
+nicklimit: 16,
+notifications: true,
+regDate: getUnix(),
+adm: 0,
+adm_time: 0,
+ban: false,
+banreport: true,
+trade: true,
+warns: 0,
+warn: 0,
+warn_p: `袧械褌`,
+vig: 0,
+vig_p: `袧械褌`,
+firstmsg: true,
+tag: user_info.first_name,
+work: 0,
+clanid: false,
+mention: true,
+realty: {
+home: 0
+},
+ainfo: {
+all_an
+ 
+s: 0,
+ans: 0,
+good_ans: 0,
+bad_ans: 0
+
+},
+rep: {
+status: false,
+id: false
+},
+marriage: {
+partner: 0,
+requests: []
+},
+transport: {
+car: 0,
+airplane: 0,
+bicycle: 0
+
+
+},
+misc: {
+phone: 0,
+pet: 0,
+farm: 0,
+farm_count: 0,
+shaxt: 0,
+shaxt_count: 0,
+pk: 0
+},
+pet: {
+lvl: 0,
+poterl: false
+},
+褋coin: 0
+});
+/*require('fs').createFileSync('./base/Logs[user.uid].json', JSON.stringify(users, null, '\t'));;*/
+console.log(` +1 懈谐褉芯泻 [袠谐褉芯泻芯胁: ${users.length}]`);
+console.log(``);
+saveUsers();
+/*logsUsers([{
+command: command
+}]);
+saveLogs;*/
+}
+message.user = users.find(x=> x.id === message.senderId);
+
+const bot = (text, params) => {
+return message.send(`${message.user.mention ? `@id${message.user.id} (${message.user.tag})` : `${message.user.tag}`}, ${text}`, params);
+}
+const command = commands.find(x=> x[0].test(message.text));
+if(!command) return;
+
+if(message.user.ban) return bot(`胁邪褕 邪泻泻邪褍薪褌 蟹邪斜谢芯泻懈褉芯胁邪薪 鉀擿);
+
+/*logsUsers.push([{
+command: command
+}]);
+saveLogs;*/
+if(message.user.firstmsg)
+{
+
+bot(`褟 胁懈卸褍 褌褘 薪芯胁械薪褜泻懈泄! 袪邪写 锌芯蟹薪邪泻芯屑懈褌褋褟, 芯褌锌褉邪胁褜 芦锌芯屑芯褖褜禄 褔褌芯 斜褘 褍蟹薪邪褌褜 屑芯懈 泻芯屑邪薪写褘. [馃摎]`,
+{
+keyboard:JSON.stringify(
+{
+"one_time": false,
+"buttons": [
+[{
+"action": {
+"type": "text",
+"payload": "{\"button\": \"1\"}",
+"label": "馃攽 袘芯薪褍褋"
+},
+"color": "positive"
+},
+{
+"action": {
+"type": "text",
+"payload": "{\"button\": \"2\"}",
+"label": "馃摎 袩芯屑芯褖褜"
+},
+"color": "primary"
+},
+{
+"action": {
+"type": "text",
+"payload": "{\"button\": \"3\"}",
+"label": "馃攱 肖械褉屑邪"
+},
+"color": "primary"
+},
+]
+]
+})
+});
+message.sendSticker(10053);
+stats.new_users += 1;
+message.user.firstmsg = false;
+return;
+
+}
+
+if(!command)
+{
+
+if(!message.isChat) return bot(`孝邪泻芯泄 泻芯屑邪薪写褘 薪械 褋褍褖械褋褌胁褍械褌, 芯褌锌褉邪胁褜 芦锌芯屑芯褖褜禄 褔褌芯 斜褘 褍蟹薪邪褌褜 屑芯懈 泻芯屑邪薪写褘.${smileerror}`);
+if(message.isChat) return;
+
+}
+
+if(message.user.exp >= 24)
+{
+message.user.exp = 1;
+message.user.level += 1;
+}
+
+message.args = message.text.match(command[0]);
+await command[1](message, bot);
+
+saveUsers();
+console.log(` 袙胁械写械薪邪 泻芯屑邪薪写邪: ${message.text}.`)
+console.log(``)
+});
+
+setInterval(async () => {
+await saveUsers();
+console.log(' 袘邪蟹邪 写邪薪薪褘褏 褍褋锌械褕薪芯 褋芯褏褉邪薪械薪邪.');
+console.log('');
+}, 30000);
+
+async function saveUsers()
+{
+require('fs').writeFileSync('./base/users.json', JSON.stringify(users, null, '\t'));;
+return true;
+}
+
+const cmd = {
+hear: (p, f) => {
+commands.push([p, f]);
+}
+}
+
+let smileerror = utils.pick([`馃槖`, `馃槸`, `馃様`, `馃`]);
+let smilesuccess = utils.pick([`馃槸`, `馃檪`, `馃`, `鈽篳]);
+let smilerand = utils.pick([`[馃崚馃崐馃崜]`, `[馃挵馃崐馃崚]`, `[馃崐馃崐馃挵]`, `[馃崑馃崐馃崐]`, `[馃挵馃崜馃挵]`]);
+let smilelov = utils.pick([`馃挾`, `馃拲`, `馃拵`, `馃挵`, `馃巵`, `鈿絗]);
+let smilelovf = utils.pick([`谢芯胁褍褕泻芯泄`, `屑褘褕械谢芯胁泻芯泄`, `泻邪锌泻邪薪芯屑`]);
+
+setInterval(async () => {
+
+smileerror = utils.pick([`馃槖`, `馃槸`, `馃様`, `馃`]);
+smilesuccess = utils.pick([`馃槸`, `馃檪`, `馃`, `鈽篳]);
+smilerand = utils.pick([`[馃崚馃崐馃崜]`, `[馃挵馃崐馃崚]`, `[馃崐馃崐馃挵]`, `[馃崑馃崐馃崐]`, `[馃挵馃崜馃挵]`]);
+smilelov = utils.pick([`馃挾`, `馃拲`, `馃拵`, `馃挵`, `馃巵`, `鈿絗]);
+smilelovf = utils.pick([`谢芯胁褍褕泻芯泄`, `屑褘褕械谢芯胁泻芯泄`, `泻邪锌泻邪薪芯屑`]);
+
+}, 1);
+
+function msgError(messagetext)
+{
+return (`${messagetext} ${utils.pick([`馃槸`, `馃檪`, `馃`, `鈽篳])}`);
+}
+
+cmd.hear(/(?:锌芯屑芯褖褜|泻芯屑邪薪写褘|馃摎 袩芯屑芯褖褜|屑械薪褞|help|commands|cmds|menu|薪邪褔邪褌褜|start|馃摎 袩芯屑芯褖褜)$/i, async (message, bot) => {
+message.user.foolder += 1;
+await bot(`袦芯懈 泻芯屑邪薪写褘:
+[馃審] 袨褋薪芯胁薪芯械:
+ᅠ馃巰 袩褉芯褎懈谢褜
+ᅠ馃挷 袘邪谢邪薪褋
+ᅠ馃挸 袘邪薪泻 [斜邪薪泻/褋褍屑屑邪/褋薪褟褌褜]
+ᅠ馃搸 袧懈泻 [薪懈泻/胁泻谢/胁褘泻谢]
+ᅠ馃審 孝芯锌 - 褌芯锌 懈谐褉芯泻芯胁
+ᅠ馃挼 袩械褉械写邪褌褜 [ID] [小校袦袦袗] - 锌械褉械写邪褔邪 胁邪谢褞褌褘.
+ᅠ馃拵 袣袩械褉械写邪褌褜 [ID] [小校袦袦袗] - 锌械褉械写邪褔邪 泻芯懈薪芯胁.
